@@ -1,0 +1,759 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    background-color: #e4f1f5;
+}
+
+body h1, h2, h3 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+body h1 {
+    color: #2377A8;
+}
+
+body h2, h3, p {
+    color: #3f5965 ;
+    
+}
+
+body p, li {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+
+body ul {
+    padding-inline-start: 0;
+}
+
+body a {
+    text-decoration: none;
+    color: #3f5965;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+body a:hover {
+    color: #289db9;
+    transform: scale(1.1);
+} 
+.background-div {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background-div::before {
+    content: "";
+    background-image: url('../img/background.jpg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2; 
+    z-index: -1; 
+    animation: fadeInBackground 2s ease-in-out forwards;
+    /* Optional Enhancements */
+    background-attachment: fixed;
+    pointer-events: none;
+}
+
+.profile-image {
+    order: 1;
+}
+
+/* fa colors*/
+.fa-circle-check,
+.fa-circle {
+    color: #289db9;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the background */
+}
+/* Navigation */
+ul li {
+    list-style-type: none;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 825px;
+    background-color: #e4f1f5;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+nav ul li {
+    font-weight: bold;
+    color: #3f5965;
+    transition: transform 0.3s ease;
+    
+}
+nav ul li:hover {
+    color: #289db9;
+    transform: scale(1.1);
+}
+nav ul li a {
+    white-space: nowrap;
+}
+
+.linkedin-icon {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+/* main content*/
+.profile-picture {
+    animation: zoomIn 1.5s forwards; /* Zoom-in effect */
+    
+}
+.content {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+}
+.left {
+    opacity: 0;
+    margin-top: 150px;
+    width: 35%;
+    margin-left: 50px;
+    animation: zoomIn 1.5s forwards; /* Zoom-in effect */
+    animation-delay: 1s;
+}
+
+.profile-img {
+    height: 300px;
+}
+
+.other-experience p, h3 {
+    color: #3f5965;
+}
+.boutique-title {
+    font-weight: bold;
+}
+/* show more styles other experience*/
+.collapsed .more-experience {
+    display: none;
+}
+.expanded .more-experience {
+    display: list-item;
+}
+#toggle-btn {
+    background-color: #289db9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.language-circles i {
+    vertical-align: middle;
+}
+.fr {
+    margin-left: 20px;
+}
+.en {
+    margin-left: 27px;
+}
+.ru {
+    margin-left: 38px;
+}
+
+.ua {
+    margin-left: 8.2px;
+}
+
+
+/*aside*/
+aside {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.main-text-content {
+    font-size: 30px !important;
+    margin-left: 0;
+    animation: zoomIn 1.5s forwards; /* Zoom-in effect */
+    margin-bottom: 70px;
+}
+.main-text-content h1 {
+    color: #289db9 !important;
+    font-weight: bold !important;
+    font-family: "Roboto", sans-serif !important;
+    font-style: italic;
+}
+.surname {
+    color: #3f5965;
+}
+.intro p {
+    text-align: justify;
+    opacity: 0; /* Start invisible */
+    animation: slideUp 1.2s forwards; 
+}
+
+.pro-skills {
+    opacity: 0; /* Start invisible */
+    animation: slideUp 1s forwards; 
+    animation-delay: 1.2s;
+}
+.soft-skills {
+    opacity: 0; /* Start invisible */
+    animation: slideUp 1s forwards; 
+    animation-delay: 3.6s;
+}
+
+.pro-skills-list,
+.soft-skills-list {
+    margin-left: 45px;
+}
+
+
+
+/*computing*/
+.computing-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    opacity: 0; /* Start invisible */
+    animation: slideUp 1s forwards; 
+    animation-delay: 2.4s;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+}
+
+.general-computing,
+.gestion-paie-computing {
+    display: flex;
+    gap: 50px;
+}
+
+
+/* pro skills block*/
+.pro-skills-list li, 
+.soft-skills-list li {
+    margin-bottom: 10px;
+    margin-left: -40px;
+}
+
+/*popup styles*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+}
+
+.contact img {
+    height: 200px;
+}
+
+.contact-info a {
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+.contact-info {
+    opacity: 0; /* Start invisible */
+    animation: slideUp 1s forwards; /* Animation details */
+}
+
+.contact-img {
+    animation-delay: 0.3s;
+}
+
+.phone-info {
+    animation-delay: 0.5s;
+}
+
+.email-info {
+    animation-delay: 1s;
+}
+
+
+/*schools*/
+.rh-school-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    animation: zoomIn 1.5s forwards; /* Zoom-in effect */
+
+    
+}
+
+.logo-esccom {
+    width: 250px !important;
+    border-radius: 100px;
+    animation: zoomIn 1.5s forwards; /* Zoom-in effect */
+
+}
+.school-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-description p {
+    text-align: justify;
+    animation: slideUp 1.5s forwards; /* Zoom-in effect */
+}
+
+
+
+.esccom-school,
+.rh-school {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 30px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 100px;
+    opacity: 0;
+   animation: slideUp 1.5s forwards; 
+   animation-delay: 1.2s;
+}
+
+.skills ul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-left: 100px;
+    padding-inline-start: 0;
+}
+
+.skills ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/*formation GP */
+.gp-h2 {
+    text-align: center;
+}
+/*formation rh*/
+/*a propos page*/
+.main-text-about {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 150px;
+}
+.main-text-about p {
+    font-size: 18px;
+    text-align: justify;
+}
+.official-documents {
+    display: flex;
+}
+.documents-gp, 
+.documents-rh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideUp 1.3s forwards;
+    animation-delay: 2.4s;
+    }
+.documents-gp img, 
+.documents-rh img {
+    border-radius: 50px;
+}
+
+/*stage GP page*/
+.main-stage-rh,
+.main-stage-gp {
+    margin: 0 80px;
+}
+
+.stage-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 1.5s forwards; 
+}
+
+.stage-about img {
+    border-radius: 50px;
+}
+
+.stage-about ul li {
+    margin-bottom: 20px;
+}
+
+/*stage GP*/
+
+.oxford-logo-img {
+    border-radius: 20px !important;
+}
+
+
+.oxford-letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideUp 1.5s forwards; 
+    animation-delay: 1s;
+
+}
+.oxford-letter img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*keyframes*/
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.2; /* Final opacity value */
+    }
+}
+
+/* burger menu*/
+.burger-menu-icon.open span {
+    transform: scale(0);
+}
+.burger-menu-icon.open::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.burger-menu-icon.open::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0,50%);
+}
+
+/* madia queries*/
+
+@media (max-width: 1337px) {
+    .burger-menu-icon {
+        display: block;
+        position: absolute;
+        width: 27.42px;
+        height: 18.85px;
+        top: 50px;
+        z-index: 3;
+        left: 90%;
+        cursor: pointer;
+    }
+    
+    .burger-menu-icon span {
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        left: 0;
+        height: 1px;
+        top: 9.42px;
+    }
+    
+    .burger-menu-icon:before,
+    .burger-menu-icon:after {
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+    }
+    
+    .burger-menu-icon:before {
+        top: 0;
+    }
+    .burger-menu-icon:after {
+        bottom: 0;
+    }
+    
+    .links {
+        position: relative;
+    }
+ 
+    .links ul {
+        padding-top: 50px;
+        display: none;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        background-size: cover; /* Ensure the background image covers the whole area */
+        background-position: center; /* Center the background image */
+        z-index: 9999; /* Make sure it's on top */
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        background-image: url('../img/background-contact.jpg'); 
+
+
+    }
+    
+    .links ul li {
+        font-size: 25px;
+    }
+    .linkedin-icon {
+        margin-left: 0;
+        width: 30px;
+        height: 30px;
+    }
+    
+    
+    /* Show the menu when active */
+    .links.active ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills {
+        margin-left: 0;
+    }
+}
+@media (max-width: 910px){
+    body p, li {
+        text-align: justify;
+    }
+
+    .content {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ensure the .left block takes full width */
+    .left {
+        margin-top: 0;
+        width: 100%;
+        margin-left: 30%;
+        order: 3; /* Make it appear last */
+    }
+
+    .main-text-content h1 {
+        text-align: center;
+    }
+
+    /* Make aside narrower and second in order */
+    aside {
+        width: 80%;
+        order: 2; /* Make it appear second */
+    }
+
+    /* Center headings */
+    
+    .pro-skills,
+    .soft-skills,
+    .documents-gp h2,
+    .rh-h2, 
+    .documents-rh h2 {
+        text-align: center;
+    }
+    .gp-h2 {
+        margin-left: 0;
+    }
+    .pro-skills ul,
+    .soft-skills ul {
+        margin-left: 45px;
+    }
+
+    .stage-about h1 {
+        text-align: center;
+    }
+
+    /* Make the profile image first */
+    .profile-image {
+        order: 1; /* Ensure this appears first */
+    }
+
+    /* Adjust display to flex-column */
+    .background-div {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .skills ul {
+        margin-left: 0;
+    }
+
+}
+@media (max-width: 425px) {
+    .left {
+        margin-left: 15%;
+    }
+    .general-computing,
+    .gestion-paie-computing {
+        gap: 30px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .burger-menu-icon {
+        left: 85%;
+    }
+
+    .formation-gestion-paie-content,
+    .rh-school-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .school-description {
+        margin-left: 0;
+    }
+
+    .esccom-school,
+    .rh-school {
+        margin: 0 10px;
+    }
+
+    
+    .documents-gp img,
+    .documents-rh img {
+        width: 300px;
+    }
+
+    .main-stage-rh, 
+    .main-stage-gp {
+        margin: 0 10px;
+    }
+
+    .stage-about h1 {
+        text-align: center;
+    }
+
+    .oxford-letter h3 {
+        text-align: center;
+    }
+
+    .main-text-about {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .contact-info img {
+        width: 100px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 320px) {
+
+    .profile-img {
+        width: 150px;
+        height: auto;
+        margin-left: 50px;
+        transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+        transform: scale(1.1);
+    }
+
+    main {
+        margin-left: 10%;
+    }
+
+    .formations ul
+    .experience ul {
+        padding-inline-start: 0 !important;
+    }
+
+    .formations ul li,
+    .experience ul li {
+        padding-bottom: 10px;
+    }
+
+    .fa-xs {
+        font-size: 0.50em;
+    }
+
+    .oxford-letter img {
+        width: 250px;
+        height: auto;
+    }
+}
